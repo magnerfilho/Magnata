@@ -34,6 +34,7 @@ body {
 
   /*background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 /* 
@@ -205,6 +206,15 @@ footer {
   text-align: center;
 }
 
+@media (min-width: 700px) {
+    :root {
+      --bg-url: url(./assets/bg-desktop.jpg);
+    }
+    .light {
+      --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+
+}
 
 /*ANOTAÇÕES:
 o que é javascript? é uma linguagem de programação
@@ -219,3 +229,8 @@ JS é a inteligencia
 JAVASCRIPT não é JAVA
 
 PORQUE APRENDER JS?
+
+O QUE É MEDIA QUERIES???
+at room - tudo que começa com @ é um at room
+
+*/
