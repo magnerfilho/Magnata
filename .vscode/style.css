@@ -105,10 +105,14 @@ body * {
   z-index: 1;
     /*Z-INDEX: indica qual andar ficará o tópico*/
   transform: translateY(-50%);
+  animation: slide-back .6s;
 }
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in .6s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -213,9 +217,30 @@ footer {
     .light {
       --bg-url: url(./assets/bg-desktop-light.jpg);
     }
+    
+  }
 
+/*
+**ANIMATION**
+  @keyframes
+*/
+  @keyframes slide-in{
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
 }
 
+@keyframes slide-back{
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
 /*ANOTAÇÕES:
 o que é javascript? é uma linguagem de programação
 que é interpretada e executada pelos navegadores.
