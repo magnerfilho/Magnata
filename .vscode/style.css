@@ -11,7 +11,7 @@
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url(./assets/assets/moon-stars.svg)
+  --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
 .light {
@@ -21,7 +21,7 @@
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./assets/assets/sol.svg)
+  --switch-bg-url: url(./assets/sol.svg);
 }
 
 body {
@@ -92,7 +92,7 @@ body * {
 
   margin: 4px auto;
 }
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center;
@@ -103,12 +103,12 @@ body * {
   top: 50%;
   left: 0;
   z-index: 1;
-    /*Z-INDEX: indica qual andar ficará o tópico*/
+  /*Z-INDEX: indica qual andar ficará o tópico*/
   transform: translateY(-50%);
-  animation: slide-back .6s;
+  animation: slide-back 0.6s;
 }
 .light #switch button {
-  animation: slide-in .6s forwards;
+  animation: slide-in 0.6s forwards;
 }
 
 #switch button:hover {
@@ -119,16 +119,14 @@ body * {
   display: block;
   width: 64px;
   height: 24px;
-/* surface-color-dark-mode */
+  /* surface-color-dark-mode */
   background: var(--surface-color);
-/* stroke-color-dark-mode*/
+  /* stroke-color-dark-mode*/
   border: 1px solid var(--stroke-color);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
-
 }
-
 
 /* links */
 ul {
@@ -211,20 +209,19 @@ footer {
 }
 
 @media (min-width: 700px) {
-    :root {
-      --bg-url: url(./assets/bg-desktop.jpg);
-    }
-    .light {
-      --bg-url: url(./assets/bg-desktop-light.jpg);
-    }
-    
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
 
 /*
 **ANIMATION**
   @keyframes
 */
-  @keyframes slide-in{
+@keyframes slide-in {
   from {
     left: 0;
   }
@@ -233,7 +230,7 @@ footer {
   }
 }
 
-@keyframes slide-back{
+@keyframes slide-back {
   from {
     left: 50%;
   }
